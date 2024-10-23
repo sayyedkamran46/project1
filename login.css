@@ -1,0 +1,123 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Authentication Container */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://source.unsplash.com/random/1600x900?nightlife') no-repeat center center/cover;
+}
+
+/* Form Styles */
+.auth-form {
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 2rem;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.auth-form h2 {
+    margin-bottom: 1.5rem;
+    color: #00e676;
+    font-size: 1.8rem;
+}
+
+/* Input Group Styles */
+.input-group {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+    border-bottom-color: #00e676;
+}
+
+.input-group label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ccc;
+    transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+    pointer-events: none;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+    top: -10px;
+    font-size: 0.8rem;
+    color: #00e676;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #00e676;
+    color: #000;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #00c853;
+}
+
+/* Link Style */
+.auth-form p {
+    margin-top: 1rem;
+    color: #ccc;
+}
+
+.auth-form p a {
+    color: #00e676;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-form p a:hover {
+    text-decoration: underline;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
